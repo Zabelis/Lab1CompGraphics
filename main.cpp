@@ -119,14 +119,14 @@ int main( )
     int selected_ab = 1;
     int selected_cd = 0;
     // Initialize the graphics window.
-    initwindow(500, 500);
+    initwindow(700, 500);
     int line_ab_coord[4]{100, 100, 100, 200}; //x1 y1 x2 y2
     int main_point_ab[2]{0, 0};
     int line_cd_coord[4]{200, 100, 200, 200};
     paint_new_selected(line_ab_coord);
     start_alg_Bresenham(line_cd_coord);
     outtext("Selected: AB");
-    outtextxy(0, 20, "Arrows to move. R - rotate; I - Increase the size; O - Reduce the size; Tab - Change selected line");
+    outtextxy(0, 20, "Arrows - Move; R - Rotate; I - Increase the size; O - Reduce the size; Tab - Change selected line");
     do
     {
       c = (char) getch( );
@@ -186,7 +186,7 @@ int main( )
 
         }
         show_selected(selected_ab, selected_cd);
-        outtextxy(0, 20, "Arrows to move. R - rotate; I - Increase the size; O - Reduce the size; Tab - Change selected line");
+        outtextxy(0, 20, "Arrows - Move; R - Rotate; I - Increase the size; O - Reduce the size; Tab - Change selected line");
         if (selected_cd)
             {
                 start_alg_Bresenham(line_cd_coord, 2);
@@ -203,7 +203,7 @@ int main( )
       {   // Process one of the special keys:
         c = (char) getch( );
         show_selected(selected_ab, selected_cd);
-        outtextxy(0, 20, "Arrows to move. R - rotate; I - Increase the size; O - Reduce the size; Tab - Change selected line");
+        outtextxy(0, 20, "Arrows - Move; R - Rotate; I - Increase the size; O - Reduce the size; Tab - Change selected line");
         switch (c)
         {
             case KEY_UP: {
